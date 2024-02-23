@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cte7p3of6qw3j"]
+
+[ext_resource type="Texture2D" uid="uid://dqvogjgwiwxi1" path="res://assets/materials/dark pattern.png" id="1_8nhss"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tndn5"]
+sky_top_color = Color(0.6, 0.815686, 0.894118, 1)
+sky_horizon_color = Color(0.713726, 0.842157, 0.854902, 1)
+ground_bottom_color = Color(0.254902, 0.552941, 0.52549, 1)
+ground_horizon_color = Color(0.713726, 0.842157, 0.854902, 1)
+
+[sub_resource type="Sky" id="Sky_fva21"]
+sky_material = SubResource("ProceduralSkyMaterial_tndn5")
+
+[sub_resource type="Environment" id="Environment_2jtdh"]
+background_mode = 2
+sky = SubResource("Sky_fva21")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jeok0"]
+albedo_texture = ExtResource("1_8nhss")
+uv1_triplanar = true
+
+[node name="Level1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2jtdh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(200, 0.1, 200)
+material = SubResource("StandardMaterial3D_jeok0")

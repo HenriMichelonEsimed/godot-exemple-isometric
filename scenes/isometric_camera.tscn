@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5oxfv7iml7i3"]
+
+[ext_resource type="Script" path="res://lib/isometric_camera.gd" id="1_jnykc"]
+[ext_resource type="Script" path="res://lib/camera.gd" id="1_vlyut"]
+
+[node name="CameraPivot" type="Node3D"]
+script = ExtResource("1_jnykc")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 10, -80)
+script = ExtResource("1_vlyut")
+object_to_follow_path = NodePath("..")

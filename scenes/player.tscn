@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://duy7c0f4t8f8"]
+
+[ext_resource type="Script" path="res://lib/player.gd" id="1_fh1wl"]
+[ext_resource type="PackedScene" uid="uid://dboialknk0g54" path="res://models/casual_male.tscn" id="1_qdg2m"]
+[ext_resource type="Animation" uid="uid://cwxji78smnel6" path="res://assets/anims/running.anim" id="5_xgwjp"]
+[ext_resource type="Animation" uid="uid://di0jtcbwxbr8b" path="res://assets/anims/standing.res" id="6_ktdwn"]
+[ext_resource type="Animation" uid="uid://qeogd7hwud5e" path="res://assets/anims/walking.anim" id="8_6lsq5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pu87b"]
+size = Vector3(1, 1.88708, 1.01959)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37pma"]
+_data = {
+"running": ExtResource("5_xgwjp"),
+"standing": ExtResource("6_ktdwn"),
+"walking": ExtResource("8_6lsq5")
+}
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_fh1wl")
+
+[node name="Character" parent="." instance=ExtResource("1_qdg2m")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.943665, -0.0965881)
+shape = SubResource("BoxShape3D_pu87b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Character")
+libraries = {
+"": SubResource("AnimationLibrary_37pma")
+}
