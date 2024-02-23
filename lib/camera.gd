@@ -21,6 +21,7 @@ var zoom_out = false
 
 func _ready():
 	projection = Camera3D.PROJECTION_ORTHOGONAL
+	position = Vector3(40.0, 10.0, -80.0)
 	_size = GameState.camera.size
 	if (_size == -1):
 		_size = 10 #30 / get_viewport().content_scale_factor

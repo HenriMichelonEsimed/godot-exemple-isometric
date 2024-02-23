@@ -7,6 +7,5 @@
 script = ExtResource("1_jnykc")
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 10, -80)
 script = ExtResource("1_vlyut")
 object_to_follow_path = NodePath("..")
