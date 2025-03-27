@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5oxfv7iml7i3"]
 
-[ext_resource type="Script" path="res://lib/isometric_camera.gd" id="1_jnykc"]
-[ext_resource type="Script" path="res://lib/camera.gd" id="1_vlyut"]
+[ext_resource type="Script" uid="uid://du25vtdmkkvax" path="res://lib/isometric_camera.gd" id="1_jnykc"]
+[ext_resource type="Script" uid="uid://b5kbbk5iee0sv" path="res://lib/camera.gd" id="1_vlyut"]
 
 [node name="CameraPivot" type="Node3D"]
 script = ExtResource("1_jnykc")

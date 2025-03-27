@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://duy7c0f4t8f8"]
 
-[ext_resource type="Script" path="res://lib/player.gd" id="1_fh1wl"]
+[ext_resource type="Script" uid="uid://c7lhktkwwbro4" path="res://lib/player.gd" id="1_fh1wl"]
 [ext_resource type="PackedScene" uid="uid://dboialknk0g54" path="res://models/casual_male.tscn" id="1_qdg2m"]
 [ext_resource type="Animation" uid="uid://cwxji78smnel6" path="res://assets/anims/running.anim" id="5_xgwjp"]
 [ext_resource type="Animation" uid="uid://di0jtcbwxbr8b" path="res://assets/anims/standing.res" id="6_ktdwn"]
@@ -11,9 +11,9 @@ size = Vector3(1, 1.88708, 1.01959)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37pma"]
 _data = {
-"running": ExtResource("5_xgwjp"),
-"standing": ExtResource("6_ktdwn"),
-"walking": ExtResource("8_6lsq5")
+&"running": ExtResource("5_xgwjp"),
+&"standing": ExtResource("6_ktdwn"),
+&"walking": ExtResource("8_6lsq5")
 }
 
 [node name="Player" type="CharacterBody3D"]
